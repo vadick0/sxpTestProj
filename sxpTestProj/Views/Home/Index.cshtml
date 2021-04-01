@@ -1,0 +1,49 @@
+﻿<head>
+    <style>
+        label {
+            text-align: center;
+        }
+
+        p {
+            text-align: center;
+        }
+
+        button {
+            text-align: center;
+        }
+
+        img {
+            text-align: center;
+            border: 5px solid #555;
+        }
+    </style>
+    @{
+        ViewData["Title"] = "Home Page";
+    }
+</head>
+
+<body>
+    <center>
+
+        <label> Add .xml file</label>
+        <form asp-controller="Home" id="form" asp-action="SendFile" method="post" enctype="multipart/form-data">
+            <input type="file" name="file" id="fileHere" style="display:none;" />
+            <input id="but" type="submit" value="Send" style="display:none;" />
+
+        </form>
+        <button id="but2" class="btn btn-primary">Click here to pick file</button>
+        <script src="~/lib/jquery/dist/jquery.min.js"></script>
+        <script>
+            $("#but2").click(function () {
+                document.getElementById("fileHere").click();
+            })
+            $("#fileHere").change(function () {
+                $("#but").click();
+            })
+        </script>
+        <p></p>
+        <p>Example of .xml file:</p>
+        <img src="https://i.imgur.com/ludUL3X.png">
+
+    </center>
+</body>

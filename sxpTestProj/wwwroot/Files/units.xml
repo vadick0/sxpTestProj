@@ -1,0 +1,17 @@
+<Units>
+
+<Unit Title="Team 1">
+  <Employee Name="Ivanov I.I." Position="Lead Developer" HireDate="2012.12.12"/>
+  <Employee Name="Petrov P.P." Position="Project Manager" HireDate="2014.01.01"/>
+  <Employee Name="Fedorov D.K." Position="Developer" HireDate="2016.05.01"/>
+
+</Unit>
+<Unit Title="Team 2">
+  <Employee Name="Makedonskiy P.M." Position="FullStack Developer" HireDate="2012.06.08"/>
+  <Employee Name="Ivanov V.M." Position="FullStack Developer" HireDate="2013.08.23"/>
+
+</Unit>
+<Unit Title="Team 3">
+  <Employee Name="Fedorov P.I." Position="FullStack Developer" HireDate="2015.11.02"/>
+</Unit>
+</Units>

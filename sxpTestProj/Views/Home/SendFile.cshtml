@@ -1,0 +1,39 @@
+﻿@for (int i = 0; i < ViewBag.Units.Count; i++)
+{
+<table class="table table-striped" id="@i" style="display: none;">
+    <caption>List of Team:</caption>
+    <thead>
+        <tr>
+            <th scope="col">Position</th>
+            <th scope="col">Name</th>
+            <th scope="col">Hire Date</th>
+        </tr>
+    </thead>
+    <tbody>
+        @foreach (var u in ViewBag.Units[i].Employees)
+        {
+            <tr>
+                <td>@u.Position</td>
+                <td> @u.Name</td>
+                <td>@u.HireDate</td>
+            </tr>
+        }
+    </tbody>
+</table>
+}
+
+
+<input id="selectInp" style="display: none;" value="@ViewBag.Units.Count" />
+<select asp-items="ViewBag.Titles" id="select"><option disabled selected>Please pick one</option></select>
+<script src="~/lib/jquery/dist/jquery.min.js"></script>
+
+<script>
+        $("#select").change(function () {
+            let id = document.getElementById("select").value;
+
+            for (let g = 0; g < Number.parseInt(document.getElementById('selectInp').value); g++) {
+                document.getElementById(g.toString()).style.display = "none";
+            }
+            document.getElementById(id).style.display = "block";
+        })
+</script>
